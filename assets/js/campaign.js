@@ -28,7 +28,7 @@ function updateLanding(data, campanhaKey) {
 function initCampaignLanding() {
     const campanha = getCampaignFromURL();
 
-    fetch("/assets/data/data.json")
+    fetch("/vedacit-campanha/assets/data/data.json")
         .then(res => res.json())
         .then(json => {
             const key = (campanha && json[campanha]) ? campanha : "default";
