@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vedacit | Inscrição</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/globals.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.10.5/sweetalert2.min.css">
+    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon" sizes="250x250" />
+</head>
+
+<body>
+
+    <div class="sticky-header-wrapper">
+
+        <div class="top-bar">
+            <div class="container">
+                <span class="top-bar-text">Vedacit Pro</span>
+
+                <div class="accessibility-options">
+                    <span>Contraste</span>
+                    <a href="#" aria-label="Mudar Contraste"><i class="fa-solid fa-circle-half-stroke"></i></a>
+                    <a href="#" aria-label="Modo Claro"><i class="fa-solid fa-sun"></i></a>
+                    <a href="#" aria-label="Modo Escuro"><i class="fa-solid fa-moon"></i></a>
+
+                    <span class="divider"></span> <span>Texto</span>
+                    <a href="#" aria-label="Aumentar Fonte" class="text-icon">A+</a>
+                    <a href="#" aria-label="Diminuir Fonte" class="text-icon">A-</a>
+
+                    <span class="divider"></span> <span>Libras</span>
+                    <a href="#" aria-label="Ativar Libras"><i class="fa-solid fa-hands-asl-interpreting"></i></a>
+                </div>
+
+                <div class="mobile-accessibility-menu">
+                    <span>Menu de acessibilidade</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+
+            </div>
+        </div>
+
+        <header class="site-header">
+
+            <div class="logo-wrapper">
+                <a href="/">
+                    <img src="./assets/images/logo-vedacit.svg" alt="Logo da Vedacit">
+                </a>
+            </div>
+
+            <div class="nav-wrapper">
+
+                <input type="checkbox" id="menu-toggle" class="mobile-menu-checkbox">
+
+                <label for="menu-toggle" class="mobile-nav-toggle" aria-label="Abrir menu">
+                    <i class="fa-solid fa-bars icon-open"></i> <i class="fa-solid fa-times icon-close"></i> </label>
+                <nav class="main-nav">
+                    <ul class="nav-links">
+                        <li><a href="#">Produtos e Soluções</a></li>
+                        <li><a href="#">Lojistas</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Institucional</a></li>
+                        <li><a href="#">Sistema B</a></li>
+                        <li><a href="#">Vedacit Pro</a></li>
+                    </ul>
+                    <a href="#" class="btn-header">Onde Encontrar</a>
+                </nav>
+
+                <!-- TODO: Remove isso depois -->
+                <div class="campaign-selector">
+                    <select id="campaignSelect" aria-label="Selecionar Campanha">
+                        <option value="">Selecione a Campanha</option>
+                        <option value="black_friday">Black Friday</option>
+                        <option value="churn_pix">Churn PIX</option>
+                        <option value="campanha_profissionais">Profissionais</option>
+                        <option value="lançamento_produto">Lançamento Produto</option>
+                        <option value="premiacao_vedacit">Premiação Vedacit</option>
+                        <option value="default">Padrão</option>
+                    </select>
+                </div>
+                <!-- - -->
+
+                <div class="header-search">
+                    <a href="#" aria-label="Buscar">
+                        <img src="./assets/images/search.svg" alt="search" class="search-icon">
+                    </a>
+                </div>
+            </div>
+
+        </header>
+
+        <!-- MENU MOBILE -->
+        <div class="mobile-header">
+            <label for="menu-toggle" class="mobile-nav-toggle" aria-label="Abrir menu">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+
+            <div class="mobile-logo">
+                <a href="/">
+                    <img src="./assets/images/logo-vedacit-b2c.svg" alt="Logo da Vedacit">
+                </a>
+            </div>
+
+            <div class="mobile-search">
+                <a href="#" aria-label="Buscar">
+                    <img src="./assets/images/search.svg" alt="search" class="search-icon">
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <main class="hero-section">
+        <div class="container hero-container">
+
+            <div class="hero-content">
+                <span class="subtitle">Vedacit > Inscrição</span>
+                <h1>Na Vedacit, nossa paixão é transformar!</h1>
+                <p>Somos líderes no mercado de impermeabilização e produtos de alta tecnologia para a construção civil
+                    porque unimos os nossos 88 anos de experiência com um time que faz história!.</p>
+                <a href="#" class="btn-cta-main">Confira Já!</a>
+                <div class="image-container">
+                    <img id="profImage" src="./assets/images/default.png" alt="Profissão">
+                </div>
+            </div>
+
+            <div class="hero-form-wrapper">
+                <h2>Preencha os dados abaixo</h2>
+
+                <form
+                    action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D010000008lNf"
+                    method="POST" class="web-to-lead-form">
+                    <input type="hidden" name="oid" value="00D010000008lNf">
+                    <input type="hidden" name="retURL" value="https://disway-group.github.io/vedacit-thank-you-page">
+
+                    <!-- Campos ocultos do Salesforce -->
+                    <input type="hidden" id="00N01000000egLL" name="00N01000000egLL" /> <!-- DDD Financeiro -->
+                    <input type="hidden" id="00N01000000egLQ" name="00N01000000egLQ" /> <!-- Tel Financeiro -->
+                    <input type="hidden" id="00N1U00000UlFrR" name="00N1U00000UlFrR" /> <!-- DDD -->
+                    <input type="hidden" id="00N1U00000UlFrQ" name="00N1U00000UlFrQ" /> <!-- DDD Celular -->
+
+
+                    <!-- Campo: Nome do Palestrante -->
+                    <div class="form-group">
+                        <label for="00NHZ000005tkwz" class="form-label">Nome do Palestrante</label>
+                        <input id="00NHZ000005tkwz" name="00NHZ000005tkwz" type="text" maxlength="255" size="20"
+                            class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="last_name" class="form-label">Nome</label>
+                        <input id="last_name" name="last_name" type="text" maxlength="80" size="20" class="form-input"
+                            required>
+                    </div>
+
+                    <!-- Campo: Profissão -->
+                    <div class="form-group">
+                        <label for="00NHZ000005uk26" class="form-label">Profissão</label>
+                        <select id="00NHZ000005uk26" name="00NHZ000005uk26" title="Profissão"
+                            onchange="updateProfImage()" required>
+                            <option value="">--None--</option>
+                            <option value="Pedreiro / Mestre de Obras">Pedreiro / Mestre de Obras</option>
+                            <option value="Engenheiro">Engenheiro</option>
+                            <option value="Lojista">Lojista</option>
+                            <option value="Consumidor">Consumidor</option>
+                        </select><br>
+                    </div>
+
+                    <!-- Campo: Estado -->
+                    <div class="form-group">
+                        <label for="00NHZ000005tl3R" class="form-label">Estado</label>
+                        <select id="00NHZ000005tl3R" name="00NHZ000005tl3R" title="Estado" class="form-select" required>
+                            <option value="">--Selecione--</option>
+                            <option value="AC">AC</option>
+                            <option value="AL">AL</option>
+                            <option value="AM">AM</option>
+                            <option value="AP">AP</option>
+                            <option value="BA">BA</option>
+                            <option value="CE">CE</option>
+                            <option value="DF">DF</option>
+                            <option value="ES">ES</option>
+                            <option value="GO">GO</option>
+                            <option value="MA">MA</option>
+                            <option value="MG">MG</option>
+                            <option value="MS">MS</option>
+                            <option value="MT">MT</option>
+                            <option value="PA">PA</option>
+                            <option value="PB">PB</option>
+                            <option value="PE">PE</option>
+                            <option value="PI">PI</option>
+                            <option value="PR">PR</option>
+                            <option value="RJ">RJ</option>
+                            <option value="RN">RN</option>
+                            <option value="RO">RO</option>
+                            <option value="RR">RR</option>
+                            <option value="RS">RS</option>
+                            <option value="SC">SC</option>
+                            <option value="SE">SE</option>
+                            <option value="SP">SP</option>
+                            <option value="TO">TO</option>
+                        </select>
+                    </div>
+
+                    <!-- Campo: Cidade -->
+                    <div class="form-group">
+                        <label for="00NHZ000005tlOP" class="form-label">Cidade</label>
+                        <select id="00NHZ000005tlOP" name="00NHZ000005tlOP" title="Cidade" class="form-select" required>
+                            <option value="">--Selecione--</option>
+                            <option value="Aracaju">Aracaju</option>
+                            <option value="Belém">Belém</option>
+                            <option value="Belo Horizonte">Belo Horizonte</option>
+                            <option value="Boa Vista">Boa Vista</option>
+                            <option value="Brasília">Brasília</option>
+                            <option value="Campo Grande">Campo Grande</option>
+                            <option value="Cuiabá">Cuiabá</option>
+                            <option value="Curitiba">Curitiba</option>
+                            <option value="Florianópolis">Florianópolis</option>
+                            <option value="Fortaleza">Fortaleza</option>
+                            <option value="Goiânia">Goiânia</option>
+                            <option value="João Pessoa">João Pessoa</option>
+                            <option value="Macapá">Macapá</option>
+                            <option value="Maceió">Maceió</option>
+                            <option value="Manaus">Manaus</option>
+                            <option value="Natal">Natal</option>
+                            <option value="Palmas">Palmas</option>
+                            <option value="Porto Alegre">Porto Alegre</option>
+                            <option value="Porto Velho">Porto Velho</option>
+                            <option value="Recife">Recife</option>
+                            <option value="Rio Branco">Rio Branco</option>
+                            <option value="Rio de Janeiro">Rio de Janeiro</option>
+                            <option value="Salvador">Salvador</option>
+                            <option value="São Luís">São Luís</option>
+                            <option value="São Paulo">São Paulo</option>
+                            <option value="Teresina">Teresina</option>
+                            <option value="Vitória">Vitória</option>
+                        </select>
+                    </div>
+
+                    <!-- Campo: Telefone -->
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Telefone</label>
+                        <input id="phone" name="phone" type="text" maxlength="40" size="20" class="form-input" required>
+                    </div>
+
+                    <!-- Campo: Email -->
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input id="email" name="email" type="email" maxlength="80" size="20" class="form-input"
+                            required>
+                    </div>
+
+                    <!-- Checkboxes -->
+                    <div class="form-group form-check">
+                        <label class="form-checkbox-label">
+                            Autoriza uso de Dados?
+                        </label>
+                        <input id="00NHZ000005tlbJ" name="00NHZ000005tlbJ" type="checkbox" value="1"
+                            class="form-checkbox-input" required>
+                    </div>
+
+                    <div class="form-group form-check">
+                        <label class="form-checkbox-label">
+                            Autoriza Ofertas
+                        </label>
+                        <input id="00NHZ000005tfR8" name="00NHZ000005tfR8" type="checkbox" value="1"
+                            class="form-checkbox-input" required>
+                    </div>
+
+                    <!-- Botão -->
+                    <div class="form-group form-submit">
+                        <input type="submit" name="submit" value="Enviar" class="btn-submit" required>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+
+            <div class="footer-column">
+                <h3>Institucional</h3>
+                <ul>
+                    <li><a href="#">História</a></li>
+                    <li><a href="#">Trabalhe Conosco</a></li>
+                    <li><a href="#">Instituto Vedacit</a></li>
+                    <li><a href="#">Sala de Imprensa</a></li>
+                    <li><a href="#">Nossos Prêmios</a></li>
+                    <li><a href="#">Sustentabilidade</a></li>
+                    <li><a href="#">Código de conduta de Fornecedores</a></li>
+                    <li><a href="#">Diretrizes da marca</a></li>
+                    <li><a href="#">Acessibilidade</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Produtos e Soluções</h3>
+                <ul>
+                    <li><a href="#">Categorias de produtos</a></li>
+                    <li><a href="#">Vedacit Pro</a></li>
+                </ul>
+
+                <h3 class="footer-blog-title">Blog</h3>
+                <ul>
+                    <li><a href="#">Mundo Vedacit</a></li>
+                    <li><a href="#">Vedacit Explica</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Ajuda</h3>
+                <ul>
+                    <li><a href="#">Glossário</a></li>
+                    <li><a href="#">Vedacit Explica</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Fale Conosco</h3>
+                <p class="contact-label">SAC</p>
+                <p class="contact-info"><a href="mailto:sac@vedacit.com.br">&#9993; sac@vedacit.com.br</a></p>
+                <p class="contact-info">0800 833 2248</p>
+
+                <h3>Redes Sociais</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+
+        </div>
+        <div class="copy">
+            <div class="copy-inner">
+                <div class="copy-left">
+                    <img src="./assets/images/logo-vedacit.jpg" alt="Vedacit Logo">
+                    <span>© Copyright Vedacit 2025</span>
+                </div>
+
+
+                <div class="copy-right">
+                    <a href="#" class="copy-link">
+                        Política de Privacidade <i class="fa-solid fa-circle-plus"></i>
+                    </a>
+                    <a href="#" class="copy-link">
+                        Termos de Uso <i class="fa-solid fa-circle-plus"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/regex.js"></script>
+    <script src="./assets/js/campaign.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.10.5/sweetalert2.min.js"></script>
+
+</body>
+
+</html>

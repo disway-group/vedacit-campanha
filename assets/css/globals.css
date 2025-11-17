@@ -1,0 +1,350 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.2s linear;
+  font-family: "Inter", sans-serif;
+}
+
+/* --- CONFIGURAÇÕES GLOBAIS E VARIÁVEIS --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--dark-color);
+  line-height: 1.6;
+  background-color: #ffb919;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  /* Adicionado para garantir que não haja padding */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  --header-bg-gray: #e0e0e0;
+  --topbar-bg-dark: #222222;
+  --topbar-text-color: #f0f0f0;
+  --primary-color: #ffb919;
+  --dark-color: #080808;
+  --light-color: #ffffff;
+  --text-color: #555555;
+  --border-color: #e0e0e0;
+  --font-heading: "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+.sticky-header-wrapper {
+  width: 100%;
+  position: fixed;
+  display: block;
+  top: 0px;
+  z-index: 999;
+}
+
+/* --- BARRA SUPERIOR --- */
+.top-bar {
+  background-color: var(--topbar-bg-dark);
+  color: var(--topbar-text-color);
+  padding: 8px 0;
+  font-size: 0.8rem;
+}
+
+.top-bar-text {
+  font-weight: bold;
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accessibility-options {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* --- HEADER --- */
+
+.site-header {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  background-color: var(--header-bg-gray);
+  position: fixed;
+}
+
+/* Bloco da Logo (Esquerda) */
+.logo-wrapper {
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 40px;
+  flex-shrink: 0;
+}
+
+.logo-wrapper img {
+  height: 41.86px;
+}
+
+/* Bloco da Navegação (Direita) */
+.nav-wrapper {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 40px;
+  gap: 30px;
+  background-image: url("../images/concrete-wall-light.webp");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.main-nav {
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  font-family: var(--font-body);
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--dark-color);
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+.btn-header {
+  background-color: var(--primary-color);
+  color: var(--dark-color);
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+
+/* Seletor de Campanha */
+.campaign-selector {
+  margin-left: 20px;
+}
+
+.campaign-selector select {
+  padding: 10px 15px;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  background-color: #fff;
+  color: var(--dark-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.campaign-selector select:hover {
+  border-color: var(--dark-color);
+  background-color: #f9f9f9;
+}
+
+.campaign-selector select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.2);
+}
+
+.search-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.header-search {
+  color: var(--dark-color);
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+/* --- FIM DA SEÇÃO DO HEADER --- */
+
+/* Container geral */
+.copy {
+  width: 100%;
+  border-top: 2px solid #f5a623;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* inner com largura controlada e posição relativa para o centro absoluto */
+.copy-inner {
+  max-width: 1900px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  min-height: 56px;
+  flex-wrap: wrap;
+}
+
+.copy-left {
+  width: 100%;
+  flex: 3;
+}
+
+/* logo à esquerda */
+.copy-left img {
+  height: 90px;
+  width: 228px;
+  /* ajustar conforme necessidade */
+  display: block;
+  margin-left: 20px;
+  /* afasta do canto como na imagem */
+  margin-bottom: 40px;
+}
+
+/* copyright sempre centralizado visualmente */
+.copy-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  /* ou #111 se quiser mais contraste */
+  pointer-events: none;
+  /* evita conflito se clicar sobre o centro */
+  white-space: nowrap;
+}
+
+/* Links à direita */
+.copy-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-right: 20px;
+  /* afasta do canto direito como na imagem */
+}
+
+/* Estilo dos links */
+.copy-link {
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+/* Ícone dentro de círculo parecido com a imagem */
+.copy-link i.fa-circle-plus,
+.copy-link i.fa-circle-plus:before {
+  /* caso a fonte tenha caracteres diferentes, aplicamos um fallback visual */
+}
+
+/* Melhor controlar a aparência do ícone desenhando um círculo ao redor */
+.copy-link i {
+  font-size: 22px;
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
+  /* ajuste se quiser mais destaque */
+}
+
+.copy-left span {
+  margin: 20px;
+  font-weight: 500;
+  font-size: 13px;
+}

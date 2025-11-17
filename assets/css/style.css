@@ -1,0 +1,517 @@
+/* --- SEÇÃO HERO --- */
+.hero-section {
+  padding: 80px 0;
+  background-image: url("../images/fundovedacit.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 50%;
+  color: var(--dark-color);
+  position: relative;
+}
+
+.hero-content .subtitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hero-content h1 {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 10px 0 20px 0;
+}
+
+.hero-content p {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.btn-cta-main {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  padding: 14px 30px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 1rem;
+  display: inline-block;
+}
+
+/* --- Formulário da Direita --- */
+.hero-form-wrapper {
+  flex: 1;
+  max-width: 500px;
+  background: var(--light-color);
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.hero-form-wrapper h2 {
+  font-family: var(--font-heading);
+  font-size: 1.7rem;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 5px;
+}
+
+.form-group input:not(input[type="checkbox"]),
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  font-size: 1rem;
+  color: var(--text-color);
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  /* Remove a borda padrão do navegador no foco */
+  border-color: var(--primary-color);
+  /* Borda amarela no foco */
+  box-shadow: 0 0 0 2px rgba(255, 185, 25, 0.2);
+  /* Sombra suave no foco */
+}
+
+.form-group input::placeholder {
+  color: #aaa;
+}
+
+.form-group-inline {
+  display: flex;
+  gap: 15px;
+}
+
+.form-group-inline .form-group {
+  flex: 1;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.form-check input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  border: 1px solid var(--border-color);
+}
+
+.form-check label {
+  font-size: 0.8rem;
+  color: var(--text-color);
+  line-height: 1.4;
+}
+
+/* Botão de Envio */
+.btn-submit {
+  background-color: var(--primary-color);
+  color: #1e1e1e !important;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.1s linear !important;
+}
+
+.btn-submit:hover {
+  background-color: #da9e14;
+}
+
+/* --- FOOTER --- */
+.site-footer {
+  background-color: #555555;
+  padding: 40px 0 20px 0;
+  color: var(--dark-color);
+  font-family: var(--font-body);
+  background-image: url("../images/concrete-wall.webp");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  font-weight: 500;
+}
+
+.site-footer a {
+  color: var(--dark-color);
+  /* << MUDADO PARA PRETO */
+  transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+  color: var(--primary-color);
+  /* Efeito hover (pode manter amarelo) */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 40px;
+  max-width: 1200px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 150px;
+}
+
+.footer-column h3 {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  /* << MUDADO PARA PRETO */
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.footer-column li {
+  margin-bottom: 8px;
+}
+
+.footer-column li a {
+  font-size: 0.9rem;
+  color: var(--dark-color);
+  /* << MUDADO PARA PRETO */
+}
+
+.contact-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--dark-color);
+  /* << MUDADO PARA PRETO */
+  margin-bottom: 5px;
+}
+
+.contact-info {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-icons a {
+  font-family: Arial, sans-serif;
+  font-size: 1.5rem;
+  color: var(--dark-color);
+  /* << MUDADO PARA PRETO */
+  transition: color 0.3s ease;
+}
+
+/* --- Parte Inferior do Rodapé --- */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  /* << MUDADO PARA UMA LINHA ESCURA */
+}
+
+.footer-pagination {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--dark-color);
+  /* << MUDADO PARA PRETO */
+  font-size: 0.9rem;
+}
+
+.pagination-arrow {
+  background-color: rgba(0, 0, 0, 0.1);
+  /* << MUDADO PARA FUNDO ESCURO */
+  color: var(--dark-color);
+  /* << MUDADO PARA PRETO */
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.footer-restricted p {
+  color: var(--dark-color);
+  /* << MUDADO PARA PRETO */
+  font-size: 0.8rem;
+}
+
+/* --- Estilos para ícones de acessibilidade --- */
+
+.accessibility-options {
+  display: flex;
+  gap: 30px;
+  /* Reduzindo o 'gap' principal */
+  align-items: center;
+}
+
+.accessibility-options span {
+  font-weight: 500;
+  /* Deixa o texto "Contraste", "Texto" um pouco mais forte */
+  margin-right: 2px;
+}
+
+.accessibility-options a {
+  color: var(--topbar-text-color);
+  /* Cor branca, vinda da top-bar */
+  font-size: 1.1rem;
+  /* Tamanho dos ícones */
+  transition: color 0.3s ease;
+}
+
+.accessibility-options a:hover {
+  color: var(--primary-color);
+  /* Efeito hover amarelo */
+}
+
+/* Estilo para A+ e A- */
+.accessibility-options .text-icon {
+  font-family: var(--font-heading);
+  /* Fonte Outfit */
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Divisor vertical */
+.accessibility-options .divider {
+  width: 1px;
+  height: 16px;
+  background-color: #555;
+  /* Cor cinza escura para o divisor */
+  margin: 0 5px;
+  /* Espaçamento em volta do divisor */
+}
+
+/* --- ESTILO DO MENU MÓVEL (DESKTOP) --- */
+.mobile-menu-checkbox {
+  display: none;
+  /* Esconde o checkbox real */
+}
+
+.mobile-nav-toggle {
+  display: none;
+  /* Escondido no desktop */
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--dark-color);
+  z-index: 1001;
+}
+
+/* Gerencia qual ícone (☰ ou X) está visível */
+.mobile-nav-toggle .icon-close {
+  display: none;
+}
+
+.mobile-nav-toggle .icon-open {
+  display: block;
+}
+
+.footer-blog-title {
+  margin-top: 80px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#profImage {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===========================================
+   ESTILOS DINÂMICOS POR CAMPANHA
+   Apenas subtitle e CTA mudam de cor
+   =========================================== */
+
+/* Black Friday  */
+body[data-campanha="black_friday"] .hero-content .subtitle {
+  color: #ffd700;
+  background: #1a1a1a;
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+body[data-campanha="black_friday"] .btn-cta-main {
+  background: linear-gradient(135deg, #1a1a1a, #000000);
+  color: #ffd700;
+  border: 2px solid #ffd700;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+body[data-campanha="black_friday"] .btn-cta-main:hover {
+  background: linear-gradient(135deg, #000000, #1a1a1a);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Churn PIX  */
+body[data-campanha="churn_pix"] .hero-content .subtitle {
+  color: #00b894;
+  font-weight: 800;
+}
+
+body[data-campanha="churn_pix"] .btn-cta-main {
+  background: linear-gradient(135deg, #00b894, #32bcad);
+  color: #ffffff;
+  border: none;
+
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1),
+    0px 2px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+    inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
+    inset 0px 1px 0px rgba(255, 255, 255, 0.03);
+}
+
+body[data-campanha="churn_pix"] .btn-cta-main:hover {
+  background: linear-gradient(135deg, #32bcad, #00b894);
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1),
+    0px 2px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+    inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
+    inset 0px 1px 0px rgba(255, 255, 255, 0.03);
+  transform: translateY(-2px);s
+}
+
+/* Campanha Profissionais  */
+body[data-campanha="campanha_profissionais"] .hero-content .subtitle {
+  color: #702e16ff;
+  border-left: 4px solid #702e16ff;
+  padding-left: 10px;
+}
+
+body[data-campanha="campanha_profissionais"] .btn-cta-main {
+  background: linear-gradient(135deg, #ff6b35, #ff8c42);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1),
+    0px 2px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+    inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
+    inset 0px 1px 0px rgba(255, 255, 255, 0.03);
+}
+
+body[data-campanha="campanha_profissionais"] .btn-cta-main:hover {
+  background: linear-gradient(135deg, #ff8c42, #ff6b35);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6);
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1),
+    0px 2px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+    inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
+    inset 0px 1px 0px rgba(255, 255, 255, 0.03);
+  transform: translateY(-2px);
+}
+
+/* Lançamento Produto  */
+body[data-campanha="lançamento_produto"] .hero-content .subtitle {
+  color: #0984e3;
+  background: rgba(9, 132, 227, 0.1);
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+body[data-campanha="lançamento_produto"] .btn-cta-main {
+  background: linear-gradient(135deg, #0984e3, #74b9ff);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 15px rgba(9, 132, 227, 0.4);
+}
+
+body[data-campanha="lançamento_produto"] .btn-cta-main:hover {
+  background: linear-gradient(135deg, #74b9ff, #0984e3);
+  box-shadow: 0 6px 20px rgba(9, 132, 227, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Premiação Vedacit */
+body[data-campanha="premiacao_vedacit"] .hero-content .subtitle {
+  color: #d4af37;
+  background: linear-gradient(135deg, #d4af37, #f4e5a1);
+   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03), inset 0px 1px 0px rgba(255, 255, 255, 0.03);
+  color: #1a1a1a;
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  font-weight: 800;
+}
+
+body[data-campanha="premiacao_vedacit"] .btn-cta-main {
+  background: linear-gradient(135deg, #d4af37, #f4e5a1);
+  color: #1a1a1a;
+  border: 2px solid #d4af37;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03), inset 0px 1px 0px rgba(255, 255, 255, 0.03);
+  font-weight: 700;
+}
+
+body[data-campanha="premiacao_vedacit"] .btn-cta-main:hover {
+  background: linear-gradient(135deg, #f4e5a1, #d4af37);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03), inset 0px 1px 0px rgba(255, 255, 255, 0.03);
+  transform: translateY(-2px);
+}
+
+/* Default  */
+
+@media only screen and (min-width: 760px) {
+  /* .image-container img {
+        transform: translate(100px, -130px);
+    } */
+
+  .hero-section {
+    margin-top: 124px;
+  }
+
+  .mobile-accessibility-menu {
+    display: none;
+  }
+}
