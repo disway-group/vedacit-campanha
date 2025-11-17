@@ -1,0 +1,32 @@
+{
+    "black_friday": {
+        "title": "Black Friday Vedacit Explosiva!",
+        "image": "https://picsum.photos/seed/blackfriday/800/400",
+        "description": "Uma chuva de ofertas caiu por aqui! Descontos intensos e por tempo limitadíssimo."
+    },
+    "churn_pix": {
+        "title": "Volte a Construir com o PIX!",
+        "image": "https://picsum.photos/seed/pixretorno/800/400",
+        "description": "Queremos ter você de volta! Condições únicas para reativar seu relacionamento com a gente."
+    },
+    "campanha_profissionais": {
+        "title": "Profissionais que Constroem o Futuro",
+        "image": "https://picsum.photos/seed/profissionais/800/400",
+        "description": "Uma campanha dedicada aos experts da obra. Aqui, seu conhecimento vale mais."
+    },
+    "lançamento_produto": {
+        "title": "Novo Produto Vedacit Chegando!",
+        "image": "https://picsum.photos/seed/lancamento/800/400",
+        "description": "Alta tecnologia aplicada à construção civil. Prepare-se para o que vem aí."
+    },
+    "premiacao_vedacit": {
+        "title": "Premiação Vedacit 2025",
+        "image": "https://picsum.photos/seed/premiacao/800/400",
+        "description": "Reconhecendo talentos que impermeabilizam o Brasil com excelência."
+    },
+    "default": {
+        "title": "Bem-vindo à Vedacit!",
+        "image": "https://picsum.photos/seed/default/800/400",
+        "description": "Qualidade, inovação e tradição para levar sua construção ao próximo nível."
+    }
+}
