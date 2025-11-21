@@ -7,6 +7,12 @@
   background-repeat: no-repeat;
 }
 
+#lead_source,
+#00NHZ000006SDoU,
+label[for="lead_source"] {
+    display: none !important;
+}
+
 .hero-container {
   max-width: 1200px;
   margin: 0 auto;

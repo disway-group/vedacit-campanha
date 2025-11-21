@@ -44,6 +44,8 @@ function initCampaignLanding() {
         .catch(err => {
             console.error("Erro ao carregar JSON:", err);
         });
+
+    fillHiddenFields(campanha);
 }
 
 // Função para trocar de campanha
@@ -67,3 +69,16 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+function fillHiddenFields(campanhaKey) {
+    const leadSource = document.getElementById("lead_source");
+    const utmField = document.getElementById("00NHZ000006SDoU");
+
+    if (leadSource) {
+        leadSource.value = "Campanha"; // sempre fixo
+    }
+
+    if (utmField) {
+        utmField.value = campanhaKey || ""; // campanha atual
+    }
+}
