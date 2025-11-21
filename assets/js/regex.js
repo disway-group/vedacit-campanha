@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Delay extra (se quiser garantir)
         await new Promise(res => setTimeout(res, 200));
 
-        form.submit(); // agora envia DE VERDADE
+        return true
     });
 
 });
