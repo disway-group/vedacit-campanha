@@ -84,8 +84,6 @@ function fillHiddenFields(campanhaKey) {
         leadSource.value = "Campanha"; // sempre fixo
     }
 
-    alert(campanhaKey)
-
     if (utmField) {
         utmField.value = campanhaKey || "Default"; // campanha atual
     }
