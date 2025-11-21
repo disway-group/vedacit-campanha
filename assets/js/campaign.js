@@ -13,14 +13,21 @@ function updateLanding(data, campanhaKey) {
     if (data.title) titleEl.textContent = data.title;
     if (data.description) descEl.textContent = data.description;
     if (data.image) imageEl.src = data.image;
-    
-    // Aplica a campanha como data-attribute no body
+
     document.body.dataset.campanha = campanhaKey;
-    
-    // Atualiza o select com a campanha atual
+
     const selectEl = document.getElementById("campaignSelect");
-    if (selectEl) {
-        selectEl.value = campanhaKey;
+    if (selectEl) selectEl.value = campanhaKey;
+
+    // === LÓGICA DO CAMPO DE PALESTRANTE ===
+    const palestranteField = document.querySelector('[name="00NHZ000005tkwz"]')?.closest(".form-group");
+
+    if (palestranteField) {
+        if (campanhaKey === "campanha_palestra") {
+            palestranteField.style.display = "block";
+        } else {
+            palestranteField.style.display = "none";
+        }
     }
 }
 
@@ -52,10 +59,10 @@ function changeCampaign(campanhaKey) {
 initCampaignLanding();
 
 // Adiciona listener ao select
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const selectEl = document.getElementById("campaignSelect");
     if (selectEl) {
-        selectEl.addEventListener("change", function() {
+        selectEl.addEventListener("change", function () {
             changeCampaign(this.value);
         });
     }

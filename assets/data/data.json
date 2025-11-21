@@ -14,6 +14,11 @@
         "image": "./assets/images/engenheiro.png",
         "description": "Uma campanha dedicada aos experts da obra. Aqui, seu conhecimento vale mais."
     },
+    "campanha_palestra": {
+        "title": "Palestras que Transformam Caminhos",
+        "image": "./assets/images/engenheiro.png",
+        "description": "Um encontro criado para quem busca novas ideias, troca de experiências e inspiração para evoluir na prática."
+    },
     "lançamento_produto": {
         "title": "Novo Produto Vedacit Chegando!",
         "image": "./assets/images/mestre.png",
