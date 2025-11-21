@@ -60,6 +60,7 @@ function changeCampaign(campanhaKey) {
     } else {
         window.location.href = window.location.pathname;
     }
+    fillHiddenFields(campanhaKey);
 }
 
 // Inicia
@@ -83,7 +84,9 @@ function fillHiddenFields(campanhaKey) {
         leadSource.value = "Campanha"; // sempre fixo
     }
 
+    alert(campanhaKey)
+
     if (utmField) {
-        utmField.value = campanhaKey || ""; // campanha atual
+        utmField.value = campanhaKey || "Default"; // campanha atual
     }
 }
