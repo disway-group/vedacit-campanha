@@ -396,6 +396,15 @@ body[data-campanha="black_friday"] .btn-cta-main:hover {
   transform: translateY(-2px);
 }
 
+body[data-campanha="black_friday"] .hero-section {
+  background-image: none;
+  background-color: #000;
+}
+
+body[data-campanha="black_friday"] .hero-content {
+  color: #ffd700;
+}
+
 /* Churn PIX  */
 body[data-campanha="churn_pix"] .hero-content .subtitle {
   color: #00b894;
@@ -419,7 +428,7 @@ body[data-campanha="churn_pix"] .btn-cta-main:hover {
     0px 2px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
     inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
     inset 0px 1px 0px rgba(255, 255, 255, 0.03);
-  transform: translateY(-2px);s
+  transform: translateY(-2px);
 }
 
 /* Campanha Profissionais  */
@@ -476,7 +485,7 @@ body[data-campanha="lançamento_produto"] .btn-cta-main:hover {
 body[data-campanha="premiacao_vedacit"] .hero-content .subtitle {
   color: #d4af37;
   background: linear-gradient(135deg, #d4af37, #f4e5a1);
-   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03), inset 0px 1px 0px rgba(255, 255, 255, 0.03);
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03), inset 0px 1px 0px rgba(255, 255, 255, 0.03);
   color: #1a1a1a;
   padding: 5px 10px;
   border-radius: 4px;
@@ -489,14 +498,14 @@ body[data-campanha="premiacao_vedacit"] .btn-cta-main {
   color: #1a1a1a;
   border: 2px solid #d4af37;
   box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
-   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03), inset 0px 1px 0px rgba(255, 255, 255, 0.03);
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03), inset 0px 1px 0px rgba(255, 255, 255, 0.03);
   font-weight: 700;
 }
 
 body[data-campanha="premiacao_vedacit"] .btn-cta-main:hover {
   background: linear-gradient(135deg, #f4e5a1, #d4af37);
   box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
-   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03), inset 0px 1px 0px rgba(255, 255, 255, 0.03);
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03), inset 0px 1px 0px rgba(255, 255, 255, 0.03);
   transform: translateY(-2px);
 }
 
