@@ -6,11 +6,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const telFinanceiro = document.getElementById("00N01000000egLQ");
     const dddGeral = document.getElementById("00N1U00000UlFrR");
     const dddCelular = document.getElementById("00N1U00000UlFrQ");
-    const email = document.getElementById("email")
 
     const form = document.querySelector(".web-to-lead-form");
+    if (!form) return;
 
-    // Função da máscara
+    // Máscara do telefone
     const handlePhone = (event) => {
         let input = event.target;
         input.value = phoneMask(input.value);
@@ -24,23 +24,22 @@ document.addEventListener("DOMContentLoaded", function () {
         return value;
     };
 
-    // Aplica a máscara conforme digita
     phoneInput.addEventListener("input", handlePhone);
 
     form.addEventListener("submit", async function (e) {
-        e.preventDefault(); // impede o envio imediato
+        e.preventDefault(); // bloquear envio imediato
 
-        const rawValue = phoneInput.value.replace(/\D/g, "");
+        const rawValue = (phoneInput.value || "").replace(/\D/g, "");
         const ddd = rawValue.substring(0, 2);
         const numero = rawValue.substring(2);
 
-        // Preenche campos ocultos
-        dddFinanceiro.value = ddd;
-        telFinanceiro.value = numero;
-        dddGeral.value = ddd;
-        dddCelular.value = ddd;
+        // Preenche campos ocultos (verifica existência)
+        if (dddFinanceiro) dddFinanceiro.value = ddd || "";
+        if (telFinanceiro) telFinanceiro.value = numero || "";
+        if (dddGeral) dddGeral.value = ddd || "";
+        if (dddCelular) dddCelular.value = ddd || "";
 
-        // Validação DDD
+        // Validações
         if (ddd.length !== 2) {
             await Swal.fire({
                 icon: 'warning',
@@ -52,7 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // Validação número
         if (numero.length < 8 || numero.length > 9) {
             await Swal.fire({
                 icon: 'error',
@@ -64,7 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // Validação total
         const phoneRegex = /^\d{10,11}$/;
         if (!phoneRegex.test(rawValue)) {
             await Swal.fire({
@@ -77,20 +74,40 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // Remove máscara
+        // Remove máscara do campo visível para enviar
         phoneInput.value = rawValue;
 
-        // Pega campanha que você definiu no script
+        // Atualiza retURL adicionando utm_campaign corretamente
         const campanhaKey = getCampaignFromURL() || "default";
-
-        // Adiciona a utm_campaign no retURL
         const retURLField = document.querySelector("input[name='retURL']");
         if (retURLField) {
-            const base = retURLField.value;
-            retURLField.value = `${base}?utm_campaign=${campanhaKey}`;
+            try {
+                // usa URL para montar corretamente (compatível com absolute + relative)
+                let base = retURLField.value;
+                // Se base for relativa (começa com / ou https?), tenta usar URL constructor com origin atual
+                let url;
+                try {
+                    url = new URL(base);
+                } catch {
+                    // base relativa -> constrói com origin atual
+                    url = new URL(base, window.location.origin);
+                }
+
+                // Se já tiver utm_campaign, substitui; senão adiciona
+                url.searchParams.set('utm_campaign', campanhaKey);
+
+                // Se originalmente era relativo, queremos definir o mesmo formato que havia antes.
+                // Mas para segurança com Salesforce, manter valor absoluto é ok.
+                retURLField.value = url.toString();
+            } catch (err) {
+                // fallback simples
+                const base = retURLField.value || "";
+                const separator = base.includes('?') ? '&' : '?';
+                retURLField.value = `${base}${separator}utm_campaign=${encodeURIComponent(campanhaKey)}`;
+            }
         }
 
-        // Alerta de sucesso com delay real
+        // Mostra alerta de sucesso por ~2s
         await Swal.fire({
             icon: 'success',
             title: 'Tudo certo!',
@@ -100,10 +117,10 @@ document.addEventListener("DOMContentLoaded", function () {
             showConfirmButton: false
         });
 
-        // Delay extra (se quiser garantir)
+        // Pequeno delay adicional
         await new Promise(res => setTimeout(res, 200));
 
-        return true
+        // Chamada segura ao submit nativo (ignora se algo chama submit como nome de campo)
+        HTMLFormElement.prototype.submit.call(form);
     });
-
 });
