@@ -154,7 +154,8 @@
                         <option value="leads_genericos">leads_genericos</option>
                         <option value="Campanha">Campanha</option>
                     </select>
-                    <input id="00NHZ000006SDoU" maxlength="255" name="00NHZ000006SDoU" size="20" type="text" style="display: none;"/>
+                    <input id="00NHZ000006SDoU" maxlength="255" name="00NHZ000006SDoU" size="20" type="text"
+                        style="display: none;" />
 
 
                     <!-- Campo: Nome do Palestrante -->
@@ -375,7 +376,26 @@
     <script src="./assets/js/regex.js"></script>
     <script src="./assets/js/campaign.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.10.5/sweetalert2.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
 
+            Swal.fire({
+                title: 'Carregando',
+                html: 'Preparando conteúdo...',
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                backdrop: 'rgba(0, 0, 0, 0.85)', // bem mais escuro
+                didOpen: () => {
+                    Swal.showLoading();
+                }
+            });
+
+            setTimeout(() => {
+                Swal.close();
+            }, 2000);
+
+        });
+    </script>
 </body>
 
 </html>

@@ -10,13 +10,13 @@ function updateProfImage() {
     let fileName = "default.png";
 
     if (value.includes("pedreiro") || value.includes("mestre")) {
-        fileName = "mestre.png";
+        fileName = "MestreCenter.png";
     } else if (value.includes("engenheiro")) {
         fileName = "engenheiro.png";
     } else if (value.includes("consumidor")) {
-        fileName = "Consumidor_Outros.png";
+        fileName = "ConsumidorCenter.png";
     } else if (value.includes("lojista")) {
-        fileName = "Revendedor.png";
+        fileName = "RevendedorCenter.png";
     }
 
     image.src = basePath + fileName;
