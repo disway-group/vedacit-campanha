@@ -1,7 +1,7 @@
 // Pega o valor da campanha na URL (?campanha=xxxx)
 function getCampaignFromURL() {
     const params = new URLSearchParams(window.location.search);
-    return params.get("campanha");
+    return params.get("utm_campaign");
 }
 
 // Atualiza os elementos da página
@@ -42,7 +42,7 @@ function initCampaignLanding() {
 // Função para trocar de campanha
 function changeCampaign(campanhaKey) {
     if (campanhaKey) {
-        window.location.href = `${window.location.pathname}?campanha=${campanhaKey}`;
+        window.location.href = `${window.location.pathname}?utm_campaign=${campanhaKey}`;
     } else {
         window.location.href = window.location.pathname;
     }
