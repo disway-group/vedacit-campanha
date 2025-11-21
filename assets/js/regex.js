@@ -27,21 +27,21 @@ document.addEventListener("DOMContentLoaded", function () {
     // Aplica a máscara conforme digita
     phoneInput.addEventListener("input", handlePhone);
 
-    // Validação e preenchimento dos campos antes do envio
     form.addEventListener("submit", async function (e) {
-        const rawValue = phoneInput.value.replace(/\D/g, ""); // somente números
+        e.preventDefault(); // impede o envio imediato
+
+        const rawValue = phoneInput.value.replace(/\D/g, "");
         const ddd = rawValue.substring(0, 2);
         const numero = rawValue.substring(2);
 
-        // Preenche todos os campos ocultos
+        // Preenche campos ocultos
         dddFinanceiro.value = ddd;
         telFinanceiro.value = numero;
         dddGeral.value = ddd;
         dddCelular.value = ddd;
 
-        // Validação básica
+        // Validação DDD
         if (ddd.length !== 2) {
-            e.preventDefault();
             await Swal.fire({
                 icon: 'warning',
                 title: 'DDD inválido',
@@ -49,38 +49,48 @@ document.addEventListener("DOMContentLoaded", function () {
                 confirmButtonColor: '#f5a623'
             });
             phoneInput.focus();
-            return false;
+            return;
         }
 
+        // Validação número
         if (numero.length < 8 || numero.length > 9) {
-            e.preventDefault();
             await Swal.fire({
                 icon: 'error',
                 title: 'Número inválido',
-                text: 'O número de telefone deve ter entre 8 e 9 dígitos após o DDD.',
+                text: 'O número deve ter entre 8 e 9 dígitos.',
                 confirmButtonColor: '#f5a623'
             });
             phoneInput.focus();
-            return false;
+            return;
         }
 
-        // Valida formato total (DDD + número)
+        // Validação total
         const phoneRegex = /^\d{10,11}$/;
         if (!phoneRegex.test(rawValue)) {
-            e.preventDefault();
             await Swal.fire({
                 icon: 'error',
                 title: 'Formato incorreto',
-                text: 'Por favor, insira um telefone válido no formato (11) 91234-5678.',
+                text: 'Insira um telefone válido no formato (11) 91234-5678.',
                 confirmButtonColor: '#f5a623'
             });
             phoneInput.focus();
-            return false;
+            return;
         }
 
-        // Remove a máscara antes do envio
+        // Remove máscara
         phoneInput.value = rawValue;
 
+        // Pega campanha que você definiu no script
+        const campanhaKey = getCampaignFromURL() || "default";
+
+        // Adiciona a utm_campaign no retURL
+        const retURLField = document.querySelector("input[name='retURL']");
+        if (retURLField) {
+            const base = retURLField.value;
+            retURLField.value = `${base}?utm_campaign=${campanhaKey}`;
+        }
+
+        // Alerta de sucesso com delay real
         await Swal.fire({
             icon: 'success',
             title: 'Tudo certo!',
@@ -90,6 +100,10 @@ document.addEventListener("DOMContentLoaded", function () {
             showConfirmButton: false
         });
 
-        return true;
+        // Delay extra (se quiser garantir)
+        await new Promise(res => setTimeout(res, 200));
+
+        form.submit(); // agora envia DE VERDADE
     });
+
 });
