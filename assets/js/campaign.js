@@ -20,15 +20,20 @@ function updateLanding(data, campanhaKey) {
     if (selectEl) selectEl.value = campanhaKey;
 
     // === LÓGICA DO CAMPO DE PALESTRANTE ===
-    const palestranteField = document.querySelector('[name="00NHZ000005tkwz"]')?.closest(".form-group");
+    const palestranteInput = document.querySelector('[name="00NHZ000005tkwz"]');
+    const palestranteField = palestranteInput?.closest(".form-group");
 
     if (palestranteField) {
         if (campanhaKey === "campanha_palestra") {
             palestranteField.style.display = "block";
+            palestranteInput.required = true;
         } else {
             palestranteField.style.display = "none";
+            palestranteInput.required = false;
+            palestranteInput.value = ""; // opcional: limpa o campo
         }
     }
+
 }
 
 // Carrega JSON e aplica campanha
