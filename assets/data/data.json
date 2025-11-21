@@ -2,36 +2,43 @@
     "black_friday": {
         "title": "Paz pra toda obra começa aqui!",
         "image": "./assets/images/consumidor.png",
-        "description": "Cadastre-se e tenha acesso a materiais exclusivos, novidades de produtos, vídeos de treinamento e as melhores dicas de impermeabilização. Seja para seu projeto, sua obra, casa ou loja, com Vedacit, é paz pra toda obra."
+        "description": "Cadastre-se e tenha acesso a materiais exclusivos, novidades de produtos, vídeos de treinamento e as melhores dicas de impermeabilização. Seja para seu projeto, sua obra, casa ou loja, com Vedacit, é paz pra toda obra.",
+        "thankyoutext": "Inscrição confirmada! Você receberá um e-mail com as ofertas especiais desta Black Friday em instantes."
     },
     "churn_pix": {
         "title": "Paz pra toda obra começa aqui!",
         "image": "./assets/images/Consumidor_Outros.png",
-        "description": "Cadastre-se e tenha acesso a materiais exclusivos, novidades de produtos, vídeos de treinamento e as melhores dicas de impermeabilização. Seja para seu projeto, sua obra, casa ou loja, com Vedacit, é paz pra toda obra."
+        "description": "Cadastre-se e tenha acesso a materiais exclusivos, novidades de produtos, vídeos de treinamento e as melhores dicas de impermeabilização. Seja para seu projeto, sua obra, casa ou loja, com Vedacit, é paz pra toda obra.",
+        "thankyoutext": "Cadastro concluído! Em breve entraremos em contato para apresentar as condições exclusivas de retorno via Pix."
     },
     "campanha_profissionais": {
         "title": "Paz pra toda obra começa aqui!",
         "image": "./assets/images/engenheiro.png",
-        "description": "Cadastre-se e tenha acesso a materiais exclusivos, novidades de produtos, vídeos de treinamento e as melhores dicas de impermeabilização. Seja para seu projeto, sua obra, casa ou loja, com Vedacit, é paz pra toda obra."
+        "description": "Cadastre-se e tenha acesso a materiais exclusivos, novidades de produtos, vídeos de treinamento e as melhores dicas de impermeabilização. Seja para seu projeto, sua obra, casa ou loja, com Vedacit, é paz pra toda obra.",
+        "thankyoutext": "Inscrição recebida! Em breve você receberá um e-mail com conteúdos e oportunidades dedicadas aos profissionais da obra."
     },
     "campanha_palestra": {
         "title": "Paz pra toda obra começa aqui!",
         "image": "./assets/images/engenheiro.png",
-        "description": "Cadastre-se e tenha acesso a materiais exclusivos, novidades de produtos, vídeos de treinamento e as melhores dicas de impermeabilização. Seja para seu projeto, sua obra, casa ou loja, com Vedacit, é paz pra toda obra."
+        "description": "Cadastre-se e tenha acesso a materiais exclusivos, novidades de produtos, vídeos de treinamento e as melhores dicas de impermeabilização. Seja para seu projeto, sua obra, casa ou loja, com Vedacit, é paz pra toda obra.",
+        "thankyoutext": "Tudo certo com sua inscrição! Você receberá um e-mail com as informações completas sobre a palestra."
     },
     "lançamento_produto": {
         "title": "Paz pra toda obra começa aqui!",
         "image": "./assets/images/mestre.png",
-        "description": "Cadastre-se e tenha acesso a materiais exclusivos, novidades de produtos, vídeos de treinamento e as melhores dicas de impermeabilização. Seja para seu projeto, sua obra, casa ou loja, com Vedacit, é paz pra toda obra."
+        "description": "Cadastre-se e tenha acesso a materiais exclusivos, novidades de produtos, vídeos de treinamento e as melhores dicas de impermeabilização. Seja para seu projeto, sua obra, casa ou loja, com Vedacit, é paz pra toda obra.",
+        "thankyoutext": "Inscrição realizada! Em breve enviaremos um e-mail com todos os detalhes sobre o lançamento."
     },
     "premiacao_vedacit": {
         "title": "Paz pra toda obra começa aqui!",
         "image": "./assets/images/mestre-de-obras.png",
-        "description": "Cadastre-se e tenha acesso a materiais exclusivos, novidades de produtos, vídeos de treinamento e as melhores dicas de impermeabilização. Seja para seu projeto, sua obra, casa ou loja, com Vedacit, é paz pra toda obra."
+        "description": "Cadastre-se e tenha acesso a materiais exclusivos, novidades de produtos, vídeos de treinamento e as melhores dicas de impermeabilização. Seja para seu projeto, sua obra, casa ou loja, com Vedacit, é paz pra toda obra.",
+        "thankyoutext": "Cadastro confirmado! Você receberá novidades sobre a premiação diretamente no seu e-mail."
     },
     "default": {
         "title": "Paz pra toda obra começa aqui!",
         "image": "./assets/images/default.png",
-        "description": "Cadastre-se e tenha acesso a materiais exclusivos, novidades de produtos, vídeos de treinamento e as melhores dicas de impermeabilização. Seja para seu projeto, sua obra, casa ou loja, com Vedacit, é paz pra toda obra."
+        "description": "Cadastre-se e tenha acesso a materiais exclusivos, novidades de produtos, vídeos de treinamento e as melhores dicas de impermeabilização. Seja para seu projeto, sua obra, casa ou loja, com Vedacit, é paz pra toda obra.",
+        "thankyoutext": "Inscrição concluída com sucesso! Em breve entraremos em contato com mais informações."
     }
 }
