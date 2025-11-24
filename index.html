@@ -13,9 +13,15 @@
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.10.5/sweetalert2.min.css">
     <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon" sizes="250x250" />
+    <style>
+        body.preload {
+            opacity: 0;
+            transition: opacity .3s ease;
+        }
+    </style>
 </head>
 
-<body>
+<body class="preload">
 
     <div class="sticky-header-wrapper">
 
@@ -384,7 +390,7 @@
                 html: 'Preparando conteúdo...',
                 allowOutsideClick: false,
                 allowEscapeKey: false,
-                backdrop: 'rgba(0, 0, 0, 0.85)', // bem mais escuro
+                backdrop: 'rgba(0, 0, 0, 0.9)', // bem mais escuro
                 didOpen: () => {
                     Swal.showLoading();
                 }
