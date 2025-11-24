@@ -324,12 +324,6 @@ h6 {
   font-size: 13px;
 }
 
-/* Ícone dentro de círculo parecido com a imagem */
-.copy-link i.fa-circle-plus,
-.copy-link i.fa-circle-plus:before {
-  /* caso a fonte tenha caracteres diferentes, aplicamos um fallback visual */
-}
-
 /* Melhor controlar a aparência do ícone desenhando um círculo ao redor */
 .copy-link i {
   font-size: 22px;
