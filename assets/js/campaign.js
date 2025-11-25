@@ -48,7 +48,7 @@ function fillHiddenFields(key) {
     const leadSource = qs("#lead_source");
     const utmField = document.getElementById("00NHZ000006SDoU"); // <-- Ajustado
 
-    if (leadSource) leadSource.value = "Campanha";
+    if (leadSource) leadSource.value = "Site_Institucional";
     if (utmField) utmField.value = utm;
 }
 
