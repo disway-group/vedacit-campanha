@@ -60,7 +60,7 @@ async function initCampaignLanding() {
     const campanhaKey = getCampaignFromURL();
 
     try {
-        const res = await fetch("/vedacit-campanha/assets/data/data.json");
+        const res = await fetch("/assets/data/data.json");
         const json = await res.json();
 
         const data = json[campanhaKey] || json.default;
