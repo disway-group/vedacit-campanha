@@ -107,19 +107,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
-        // Mostra alerta de sucesso por ~2s
-        await Swal.fire({
-            icon: 'success',
-            title: 'Tudo certo!',
-            text: 'Seus dados foram validados!',
-            confirmButtonColor: '#28a745',
-            timer: 2000,
-            showConfirmButton: false
-        });
-
-        // Pequeno delay adicional
-        await new Promise(res => setTimeout(res, 200));
-
         // Chamada segura ao submit nativo (ignora se algo chama submit como nome de campo)
         HTMLFormElement.prototype.submit.call(form);
     });

@@ -1,0 +1,52 @@
+.form-group {
+    position: relative;
+    margin-bottom: 18px;
+}
+
+/* mensagem */
+.error-message {
+    display: block;
+    font-size: 13px;
+    color: #d93025;
+    margin-top: 6px;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: opacity .18s ease, transform .18s ease;
+    pointer-events: none;
+}
+
+.error-message.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* border / foco de erro */
+.form-input.error,
+.form-select.error,
+.form-checkbox-input.error,
+.form-radio-input.error {
+    border-color: #d93025 !important;
+    box-shadow: 0 0 0 1px rgba(217, 49, 37, 0.12);
+}
+
+/* para checkbox/radio que não recebem border, aplicamos outline no container */
+.form-check.error {
+    outline: 1px solid rgba(217, 49, 37, 0.2);
+    padding: 0px;
+    border-radius: 4px;
+}
+
+.form-check {
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.space-between {
+    display: flex;
+    flex: 2;
+    justify-content: space-between;
+    width: 100%;
+}
