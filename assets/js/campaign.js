@@ -27,7 +27,7 @@ function updateLanding(data, key) {
     if (selectEl) selectEl.value = key;
 
     // Campo palestrante
-    const palestranteInput = qs('[name="00NHZ000005tkwz"]');
+    const palestranteInput = qs('[name="00NU4000005pspx"]');
     const wrapper = palestranteInput?.closest(".form-group");
 
     if (wrapper) {
@@ -46,7 +46,7 @@ function fillHiddenFields(key) {
     const utm = key || "default";
 
     const leadSource = qs("#lead_source");
-    const utmField = document.getElementById("00NHZ000006SDoU"); // <-- Ajustado
+    const utmField = document.getElementById("00NU4000005pspt"); // <-- Ajustado
 
     if (leadSource) leadSource.value = "Site_Institucional";
     if (utmField) utmField.value = utm;

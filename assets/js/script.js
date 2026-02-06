@@ -1,5 +1,5 @@
 function updateProfImage() {
-    const select = document.getElementById("00NHZ000005uk26");
+    const select = document.getElementById("00NU4000005pspy");
     const image = document.getElementById("profImage");
     const value = select.value.toLowerCase();
 

@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const phoneInput = document.getElementById("phone");
 
     // Campos Salesforce
-    const dddFinanceiro = document.getElementById("00N01000000egLL");
-    const telFinanceiro = document.getElementById("00N01000000egLQ");
+    const dddFinanceiro = document.getElementById("00N4Q00000ByORP");
+    const telFinanceiro = document.getElementById("00N4Q00000ByORK");
     const dddGeral = document.getElementById("00N1U00000UlFrR");
     const dddCelular = document.getElementById("00N1U00000UlFrQ");
 

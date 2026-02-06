@@ -126,21 +126,20 @@
                 <h2>Preencha os dados abaixo</h2>
 
                 <form
-                    action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D010000008lNf"
+                    action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D1U000000rUS7"
                     method="POST" class="web-to-lead-form">
-                    <input type="hidden" name="oid" value="00D010000008lNf">
-                    <input type="hidden" name="retURL" value="https://vedacit-thank-you-page.onrender.com/">
+                    <input type="hidden" name="oid" value="00D1U000000rUS7">
+                    <input type="hidden" name="retURL" value="https://vedacit.com.br/thanks-campanha">
 
                     <!-- Campos ocultos do Salesforce -->
-                    <input type="hidden" id="00N01000000egLL" name="00N01000000egLL" /> <!-- DDD Financeiro -->
-                    <input type="hidden" id="00N01000000egLQ" name="00N01000000egLQ" /> <!-- Tel Financeiro -->
+                    <input type="hidden" id="00N4Q00000ByORP" name="00N4Q00000ByORP" /> <!-- DDD Financeiro -->
+                    <input type="hidden" id="00N4Q00000ByORK" name="00N4Q00000ByORK" /> <!-- Tel Financeiro -->
                     <input type="hidden" id="00N1U00000UlFrR" name="00N1U00000UlFrR" /> <!-- DDD -->
                     <input type="hidden" id="00N1U00000UlFrQ" name="00N1U00000UlFrQ" /> <!-- DDD Celular -->
 
                     <label style="display: none;" for="lead_source">Lead Source</label>
+
                     <select id="lead_source" name="lead_source" style="display: none;">
-                        <option value="">--None--</option>
-                        <option value="Advertisement">Advertisement</option>
                         <option value="Customer Event">Customer Event</option>
                         <option value="Employee Referral">Employee Referral</option>
                         <option value="Google AdWords">Google AdWords</option>
@@ -155,21 +154,20 @@
                         <option value="Fale conosco">Fale conosco</option>
                         <option value="Chat">Chat</option>
                         <option value="E-mail Vedacit">E-mail Vedacit</option>
-                        <option value="leads_bim">leads_bim</option>
-                        <option value="leads_areastecnicas">leads_areastecnicas</option>
-                        <option value="leads_pedreiros">leads_pedreiros</option>
-                        <option value="leads_engenheiros">leads_engenheiros</option>
-                        <option value="leads_genericos">leads_genericos</option>
-                        <option value="Campanha">Campanha</option>
+                        <option value="leads_genericos">Genéricos</option>
+                        <option value="Site Institucional">Site Institucional</option>
                     </select>
-                    <input id="00NHZ000006SDoU" maxlength="255" name="00NHZ000006SDoU" size="20" type="text"
+
+
+                    <!-- UTM Campaign -->
+                    <input id="00NU4000005pspt" maxlength="255" name="00NU4000005pspt" size="20" type="text"
                         style="display: none;" />
 
 
                     <!-- Campo: Nome do Palestrante -->
                     <div class="form-group">
-                        <label for="00NHZ000005tkwz" class="form-label">Nome do Palestrante</label>
-                        <input id="00NHZ000005tkwz" name="00NHZ000005tkwz" type="text" maxlength="255" size="20"
+                        <label for="00NU4000005pspx" class="form-label">Nome do Palestrante</label>
+                        <input id="00NU4000005pspx" name="00NU4000005pspx" type="text" maxlength="255" size="20"
                             class="form-input">
                     </div>
 
@@ -181,14 +179,14 @@
 
                     <!-- Campo: Profissão -->
                     <div class="form-group">
-                        <label for="00NHZ000005uk26" class="form-label">Profissão</label>
-                        <select id="00NHZ000005uk26" name="00NHZ000005uk26" title="Profissão"
+                        <label for="00NU4000005pspy" class="form-label">Profissão</label>
+                        <select id="00NU4000005pspy" name="00NU4000005pspy" title="Profissão"
                             onchange="updateProfImage()" required>
                             <option value="">--None--</option>
+                            <option value="Pedreiro / Mestre de Obras">Pedreiro / Mestre de Obras</option>
+                            <option value="Engenheiro">Engenheiro</option>
                             <option value="Consumidor">Consumidor</option>
-                            <option value="Pedreiros / Mestres de Obras">Pedreiros / Mestres de Obras</option>
-                            <option value="Engenheiros / Arquitetos">Engenheiros / Arquitetos</option>
-                            <option value="Aplicadores e Empresas de Sistemas">Aplicadores e Empresas de Sistemas</option>
+                            <option value="Aplicador e Empresas de Sistemas">Aplicador e Empresas de Sistemas</option>
                             <option value="Revendedores e Distribuidores">Revendedores e Distribuidores</option>
                             <option value="Construtoras">Construtoras</option>
                             <option value="Indústria">Indústria</option>
@@ -199,8 +197,8 @@
 
                     <!-- Campo: Estado -->
                     <div class="form-group">
-                        <label for="00NHZ000005tl3R" class="form-label">Estado</label>
-                        <select id="00NHZ000005tl3R" name="00NHZ000005tl3R" title="Estado" class="form-select" required>
+                        <label for="00NU4000005pspw" class="form-label">Estado</label>
+                        <select id="00NU4000005pspw" name="00NU4000005pspw" title="Estado" class="form-select" required>
                             <option value="">--Selecione--</option>
                             <option value="AC">AC</option>
                             <option value="AL">AL</option>
@@ -234,8 +232,8 @@
 
                     <!-- Campo: Cidade -->
                     <div class="form-group">
-                        <label for="00NHZ000005tlOP" class="form-label">Cidade</label>
-                        <input id="00N01000000g3c7" maxlength="255" name="00N01000000g3c7" size="20" type="text" />
+                        <label for="00N4Q00000Byi17" class="form-label">Cidade</label>
+                        <input id="00N4Q00000Byi17" maxlength="255" name="00N4Q00000Byi17" size="20" type="text" />
                     </div>
 
                     <!-- Campo: Telefone -->
@@ -251,10 +249,10 @@
                             required>
                     </div>
 
-                    <!-- Checkboxes old atual textinho -->
                     <div class="form-group form-check">
                         <div class="space-between">
-                            <p style="font-size: small; color: gray;">Ao enviar seus dados, você declara estar ciente e de acordo com a Política de Privacidade e os Termos de Uso da Vedacit.</p>
+                            <p style="font-size: small; color: gray;">Ao enviar seus dados, você declara estar ciente e
+                                de acordo com a Política de Privacidade e os Termos de Uso da Vedacit.</p>
                         </div>
                     </div>
 
